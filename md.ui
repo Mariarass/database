@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>923</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DBEditor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>921</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #D6DAE2;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>140</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>добавление последней строки</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton{
+background: #FFB800;
+border-radius: 25px;}
+QPushButton:hover{background:#FFEBB9;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>ins.png</normaloff>ins.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>220</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>выберите строку в таблице</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton{
+background: #8000FF ;
+border-radius: 25px;}
+QPushButton:hover{background:#C39BEB;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>del.png</normaloff>del.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>300</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>выберите строку в таблице</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton{
+background: #FF005C;
+border-radius: 25px;}
+QPushButton:hover{background:#F66D9E;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>up.png</normaloff>up.png</iconset>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_3">
+     <property name="geometry">
+      <rect>
+       <x>-130</x>
+       <y>0</y>
+       <width>1251</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: #4E4F5B;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>0</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QComboBox{
+color:#ECECEF;
+	background-color: #353640;
+	border: none;
+font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;
+	
+}
+QComboBox:hover{
+background: #808195;
+	
+}
+QComboBox::drop-down {
+
+	border-left-width: 1px;
+
+ }
+QComboBox QAbstractItemView {color:#27273b;
+background-color: #353640;
+	padding: 10px;
+	selection-background-color:#808195;color:#808195;
+border:none;
+}
+</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>70</y>
+       <width>681</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{font:Arial;border:none;selection-background-color:#ff557f;background:#ffffff;}</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>131</y>
+       <width>721</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QTableWidget {	
+	background-color: white;
+
+  border:none;
+	
+	
+  selection-background-color:#b3b7c4;}
+QScrollBar:horizontal {
+border: none;
+background:white;
+}
+QScrollBar::handle:horizontal {
+background:#b3b7c4;
+width:10px;
+border-radius: 7px
+}
+QScrollBar::add-line:horizontal {
+border: none;
+background:white;
+width: 20px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+subcontrol-position: right;
+subcontrol-origin: margin;
+}
+QScrollBar::sub-line:horizontal {
+border: none;
+background:white;
+width: 20px;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+subcontrol-position: left;
+subcontrol-origin: margin;
+}
+
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+background: none;
+}
+QScrollBar:vertical {
+border: none;
+background: white;
+width:14px;
+border-radius: 0px;
+}
+QScrollBar::handle:vertical {
+background:#b3b7c4;
+min-width: 10px;
+border-radius: 7px
+}
+QScrollBar::add-line:vertical {
+border: none;
+background: white;
+height: 20px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical {
+border: none;
+background: white;
+height: 20px;
+border-top-left-radius:0px;
+border-top-right-radius: 0px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>70</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>выполнить введенный запрос</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;border-top-right-radius:5px;border-bottom-right-radius:4px;background:white;color:#27273b;}</string>
+     </property>
+     <property name="text">
+      <string>Запрос</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>151</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QFrame" name="frame_12">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_13">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background: #4E4F5B;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QFrame" name="frame_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>30</y>
+           <width>151</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+background: #4E4F5B;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="pushButton_25">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>10</y>
+            <width>161</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	color: rgb(217, 224, 255);
+background: #4E4F5B;
+border:none;
+font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;
+
+color: #d9e0ff;}
+QPushButton:hover{background: #808195;
+}</string>
+          </property>
+          <property name="text">
+           <string>             Открыть Бд           </string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_26">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>40</y>
+            <width>151</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background: #4E4F5B;
+border:none;
+font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;
+
+color: #d9e0ff;}
+QPushButton:hover{background: #808195;
+}</string>
+          </property>
+          <property name="text">
+           <string>Процедуры</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_28">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>100</y>
+            <width>151</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background: #4E4F5B;
+border:none;
+font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;
+
+color: #d9e0ff;}
+QPushButton:hover{background: #808195;
+}</string>
+          </property>
+          <property name="text">
+           <string>Выйти</string>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>38</y>
+            <width>161</width>
+            <height>0</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>151</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	color: rgb(217, 224, 255);
+background: #4E4F5B;
+border:none;
+font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;
+
+color: #d9e0ff;}
+QPushButton:hover{background: #C39BEB;
+}</string>
+           </property>
+           <property name="text">
+            <string>LOCAL</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>30</y>
+             <width>151</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	color: rgb(217, 224, 255);
+background: #4E4F5B;
+border:none;
+font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;
+
+color: #d9e0ff;}
+QPushButton:hover{background: #C39BEB;
+}</string>
+           </property>
+           <property name="text">
+            <string>INTERNET</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_27">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>70</y>
+            <width>151</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background: #4E4F5B;
+border:none;
+font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;
+
+color: #d9e0ff;}
+QPushButton:hover{background: #808195;
+}</string>
+          </property>
+          <property name="text">
+           <string>Выбрать пользователя</string>
+          </property>
+         </widget>
+         <zorder>pushButton_25</zorder>
+         <zorder>pushButton_26</zorder>
+         <zorder>pushButton_28</zorder>
+         <zorder>pushButton_27</zorder>
+         <zorder>frame</zorder>
+        </widget>
+        <widget class="QPushButton" name="pushButton_29">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: rgb(217, 224, 255);
+background: #4E4F5B;
+border:none;
+font: 25 10pt &quot;Bahnschrift Light SemiCondensed&quot;;
+
+color: #d9e0ff;}
+QPushButton:hover{background: #808195;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>menu.png</normaloff>menu.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_2">
+   <property name="text">
+    <string>Процедуры</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Локальный хост</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Интернет хост</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Выбрать пользователя</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
